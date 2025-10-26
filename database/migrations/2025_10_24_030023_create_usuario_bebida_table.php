@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('usuario_bebida_id');
             $table->string('nombre_usuario');
             $table->foreignId('menu_option_id')->constrained('menus_options', 'menu_option_id')->onDelete('cascade');
-            $table->timestamps();
+            $table->timestamps(); //agrega created_at y updated_at.
         });
     }
 

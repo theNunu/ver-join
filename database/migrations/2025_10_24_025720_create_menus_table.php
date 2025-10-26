@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('menu_id');
             $table->string('nombre');
             $table->string('tipo'); // Aquí usaremos el ENUM (bebida, comida, etc.)
-            $table->timestamps();
+            $table->timestamps(); //agrega created_at y updated_at.
         });
     }
 

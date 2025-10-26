@@ -15,4 +15,11 @@ class UsuarioBebida extends Model
     {
         return $this->belongsTo(MenuOption::class, 'menu_option_id');
     }
+
+    /*
+    Explicación
+
+        Permite $usuarioBebida->menuOption->menu->tipo para comprobar el tipo del menu relacionado
+    
+    */
 }

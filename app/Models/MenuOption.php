@@ -14,12 +14,8 @@ class MenuOption extends Model
 
     public function menu()
     {
+        //belongsTo indica que una menu_option pertenece a un menu. Con esto podemos hacer $option->menu->tipo.
         return $this->belongsTo(Menu::class, 'menu_id');
     }
 
-    // ayuda: método para preguntar si es bebida
-    // public function isBebida(): bool
-    // {
-    //     return $this->type === MenuType::BEBIDA->value; // o 'bebida' directo
-    // }
 }

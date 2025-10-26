@@ -21,6 +21,17 @@ class UsuarioBebidaRepository
             throw new \Exception('Solo se permiten bebidas.');
         }
 
-        return UsuarioBebida::create($data);
+        UsuarioBebida::create($data);
+
+        // $menuOption = MenuOption::where('nombre', $data['menu_option_id'])->first();
+
+        // dd($menuOption->nombre);
+
+           return [
+            'nombre del usuario' => $data['nombre_usuario'],
+            'nombre del producto seleccionado' => $menuOption->nombre,
+           ];
+
+     
     }
 }
