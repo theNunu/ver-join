@@ -8,16 +8,16 @@ use App\Services\UsuarioBebidaService;
 
 class UsuarioBebidaController extends Controller
 {
-    protected $service;
+    protected $usuarioBebidaService;
 
-    public function __construct(UsuarioBebidaService $service)
+    public function __construct(UsuarioBebidaService $usuarioBebidaService)
     {
-        $this->service = $service;
+        $this->usuarioBebidaService = $usuarioBebidaService;
     }
 
     public function waza()
     {
-        dd('llego');
+        // dd('llego');
         return 'wazaaa!!!!!';
     }   
 
@@ -30,7 +30,7 @@ class UsuarioBebidaController extends Controller
                 'menu_option_id' => 'required|integer',
             ]);
 
-            $usuarioBebida = $this->service->createUsuarioBebida($data);
+            $usuarioBebida = $this->usuarioBebidaService->createUsuarioBebida($data);
 
             return response()->json([
                 'success' => true,

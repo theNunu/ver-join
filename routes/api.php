@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\BasuraController;
 use App\Http\Controllers\Api\UsuarioBebidaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 // use App\Http\Controllers\Api\UsuarioBebidaController;
+Route::get('trash', [BasuraController::class, 'index']);
 
 Route::get('tilin', [UsuarioBebidaController::class, 'waza']);
 

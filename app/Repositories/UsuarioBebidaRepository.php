@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use App\Models\UsuarioBebida;
 use App\Models\MenuOption;
-use App\Enums\MenuTypeEnum;
+use App\Enums\MenuType;
 
 class UsuarioBebidaRepository
 {
@@ -17,7 +17,7 @@ class UsuarioBebidaRepository
         }
 
         // Validamos que sea una bebida
-        if ($menuOption->menu->tipo !== MenuTypeEnum::BEBIDA) {
+        if ($menuOption->menu->tipo !== MenuType::BEBIDA) {
             throw new \Exception('Solo se permiten bebidas.');
         }
 

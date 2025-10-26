@@ -2,9 +2,11 @@
 
 namespace App\Enums;
 
-enum MenuTypeEnum: string
+enum MenuType: string
 {
     case BEBIDA = 'bebida';
     case COMIDA = 'comida';
     case POSTRE = 'postre';
+    case HAMBURGUESA = 'hamburguesa';
+    // case DESAYUNO = 'desayuno';
 }
